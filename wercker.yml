@@ -1,0 +1,28 @@
+# This references the default Python container from
+# the Docker Hub with the 3.6 tag:
+# https://registry.hub.docker.com/_/python/
+box: python:3.6
+build:
+  steps:
+    - script:
+        name: echo python information
+        code: |
+          echo "python version $(python --version) running"
+          echo "pip version $(pip --version) running"
+pytest:
+  steps:
+    - script:
+      name: pytest run
+      code: |
+        pip install -r requirements.txt
+        pytest
+deploy:
+  steps:
+    - script:
+        name: pypi deploy
+        code: ./deploy.sh
+deploy_test:
+  steps:
+    - script:
+        name: pypi test deploy
+        code: ./deploy_test.sh

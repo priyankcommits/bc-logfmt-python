@@ -1,4 +1,4 @@
-BC Logfmt Python
+Beautiful Code Logfmt Python
 ======
 
 Python package for parsing log lines in the `logfmt` style.  See the
@@ -7,6 +7,9 @@ about `logfmt` conventions and use: https://github.com/kr/logfmt
 Original Python Project by Jamu kakar
 Info: https://github.com/jkakar/logfmt-python
 
+Install bc-logfmt-python
+------------
+pip install bc-logfmt-python
 
 Using bc-logfmt-python
 ------------
@@ -37,13 +40,3 @@ This program produces this output: ::
 
     key1="value1"
     key2="value2"
-
-
-
-Installation
-------------
-
-To install it, simply: ::
-
-    pip install bc-logfmt-python
-
